@@ -1,0 +1,50 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.bitbond.com/asset-tokenization-suite/offering-manager/intro-offering-manager
+docs: https://om.bitbond.com/api/docs
+summary:
+  types: [http-bearer, apiKey, wallet]
+  api_key_in: [header]
+  oauth2_flows: []
+schemes:
+- name: privy-bearer
+  type: http
+  scheme: bearer
+  bearer_format: Privy ID token (JWT)
+  in: header
+  header: Authorization
+  applies_to: >-
+    Offering Manager public investor API (POST /orders, order/portfolio reads,
+    checkout-intent, payments/checkout-session, payments/checkout-pay, kyc/init,
+    kyc/status, investor/profile, investor GDPR export/erase).
+  api: Bitbond Offering Manager API
+  sources: [https://om.bitbond.com/api/docs]
+- name: issuer-api-key
+  type: apiKey
+  in: header
+  alt: session JWT
+  applies_to: >-
+    Offering Manager issuer-management API under /api/issuer/* (audit-logs, order
+    wallet exports, team management). Authenticated with an issuer API key or a
+    logged-in session JWT.
+  api: Bitbond Offering Manager API
+  sources: [https://om.bitbond.com/api/docs]
+- name: public-unauthenticated
+  type: none
+  applies_to: >-
+    A subset of Offering Manager public endpoints require no auth: GET
+    /offerings/:slug, GET /documents/:docId/download, GET /token-info, GET
+    /payments/checkout-config, and the activation-email unsubscribe endpoints.
+  api: Bitbond Offering Manager API
+- name: wallet-connect
+  type: wallet
+  applies_to: >-
+    Token Tool self-serve app authenticates by connecting a web3 wallet at
+    tokentool.bitbond.com; contract-level actions are signed by the connected
+    wallet rather than an API credential.
+  api: Bitbond Token Tool API
+notes: >-
+  No OpenAPI spec is publicly downloadable (the Scalar reference at
+  om.bitbond.com/api/docs and its JSON are Cloudflare-gated), so this profile is
+  captured from the published GitBook API documentation rather than derived from
+  a spec.
