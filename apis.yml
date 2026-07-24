@@ -1,7 +1,17 @@
 aid: bitbond
 name: Bitbond
-description: Bitbond is a company surfaced as a portfolio company of point-nine and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Bitbond is a Berlin-based tokenization technology company (Bitbond GmbH) that
+  provides an Asset Tokenization Suite for issuing, managing, and distributing
+  digital assets on public blockchains. Its two developer-facing products are
+  Token Tool, a self-serve platform and API for deploying and managing compliant
+  ERC-20, ERC-1400, and ERC-721 smart contracts (minting, burning, transfers,
+  vesting, token sales, airdrops, and payment automation) across 11+ EVM and
+  non-EVM chains; and Offering Manager, an end-to-end securities-issuance
+  platform with a public investor REST API covering offerings, orders, payments,
+  KYC/AML, and investor profiles. Bitbond also ships an official Token Tool MCP
+  server so AI agents can deploy and manage tokens, plus documented webhooks,
+  testnet faucets, and a status page.
 url: https://raw.githubusercontent.com/api-evangelist/bitbond/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,12 +19,76 @@ x-backed-by:
 - point-nine
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
+image: https://www.bitbond.com/favicon.ico
 tags:
 - Company
-apis: []
+- Tokenization
+- Blockchain
+- Digital Assets
+- Smart Contracts
+- Web3
+- Securities
+- Payments
+- MCP
+apis:
+- name: Bitbond Offering Manager API
+  description: >-
+    Public investor REST API for the Bitbond Offering Manager securities-issuance
+    platform. Covers offerings lookup, orders, checkout/payments, KYC, investor
+    profiles, and GDPR data export/erase. Protected endpoints authenticate with a
+    Privy bearer token; a separate issuer-management API authenticates with an
+    issuer API key or session JWT.
+  humanURL: https://docs.bitbond.com/asset-tokenization-suite/offering-manager/intro-offering-manager
+  baseURL: https://om.bitbond.com/api/public
+  tags:
+  - Securities
+  - Payments
+  - KYC
+  - Offerings
+  properties:
+  - type: APIReference
+    url: https://om.bitbond.com/api/docs
+  - type: Documentation
+    url: https://docs.bitbond.com/asset-tokenization-suite/offering-manager/intro-offering-manager
+  - type: Authentication
+    url: authentication/bitbond-authentication.yml
+  - type: Webhooks
+    url: asyncapi/bitbond-offering-manager-webhooks.yml
+- name: Bitbond Token Tool API
+  description: >-
+    Programmatic token and smart-contract deployment API for Token Tool. Enables
+    minting, burning, transferring, pausing, and metadata updates on
+    CertiK-audited ERC-20/ERC-1400/ERC-721 contracts, plus token sales, airdrops,
+    vesting, and payment automation across EVM and non-EVM chains. Interaction is
+    contract/SDK-level, with published TypeScript example scripts and an official
+    MCP server.
+  humanURL: https://docs.bitbond.com/asset-tokenization-suite/token-tool/token-tool-api
+  baseURL: https://tokentool.bitbond.com
+  tags:
+  - Tokenization
+  - Smart Contracts
+  - ERC-20
+  - NFT
+  properties:
+  - type: Documentation
+    url: https://docs.bitbond.com/asset-tokenization-suite/token-tool/token-tool-api
+  - type: SourceCode
+    url: https://github.com/bitbond/token-tool-api-examples
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -23,3 +97,64 @@ maintainers:
 common:
 - type: Website
   url: https://www.bitbond.com
+- type: DeveloperPortal
+  url: https://docs.bitbond.com
+- type: Documentation
+  url: https://docs.bitbond.com/asset-tokenization-suite
+- type: APIReference
+  url: https://om.bitbond.com/api/docs
+- type: GettingStarted
+  url: https://docs.bitbond.com/asset-tokenization-suite/offering-manager/getting-started
+- type: Blog
+  url: https://www.bitbond.com/resources
+- type: BlogRSS
+  url: https://www.bitbond.com/rss.xml
+- type: GitHubOrganization
+  url: https://github.com/bitbond
+- type: StatusPage
+  url: https://status.bitbond.com
+- type: Support
+  url: mailto:service@bitbond.com
+- type: Pricing
+  url: https://tokentool.bitbond.com/pricing
+- type: SignUp
+  url: https://tokentool.bitbond.com
+- type: Login
+  url: https://om.bitbond.com
+- type: TermsOfService
+  url: https://tokentool.bitbond.com/terms
+- type: PrivacyPolicy
+  url: https://www.bitbond.com/legal
+- type: MCPServer
+  url: mcp/bitbond-mcp.yml
+- type: LLMsTxt
+  url: llms/bitbond-llms.txt
+- type: Packages
+  url: packages/bitbond-packages.yml
+- type: CLI
+  url: cli/bitbond-cli.yml
+- type: Authentication
+  url: authentication/bitbond-authentication.yml
+- type: Conventions
+  url: conventions/bitbond-conventions.yml
+- type: ErrorCatalog
+  url: errors/bitbond-problem-types.yml
+- type: Lifecycle
+  url: lifecycle/bitbond-lifecycle.yml
+- type: Conformance
+  url: conformance/bitbond-conformance.yml
+- type: WellKnown
+  url: well-known/bitbond-well-known.yml
+- type: DomainSecurity
+  url: security/bitbond-domain-security.yml
+- type: Sandbox
+  url: sandbox/bitbond-sandbox.yml
+- type: Webhooks
+  url: asyncapi/bitbond-offering-manager-webhooks.yml
+- type: AgentSkill
+  url: skills/_index.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

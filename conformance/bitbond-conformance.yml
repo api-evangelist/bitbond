@@ -1,0 +1,44 @@
+generated: '2026-07-18'
+method: derived
+source: >-
+  Derived from the Bitbond Offering Manager published API reference and Token
+  Tool documentation.
+standards:
+- id: gdpr
+  conforms: true
+  evidence: >-
+    Dedicated investor GDPR data-export (GET /investor/gdpr/export) and erasure
+    (POST /investor/gdpr/erase) endpoints; Bitbond GmbH publishes a GDPR privacy
+    policy / imprint at https://www.bitbond.com/legal.
+- id: bearer-jwt-auth
+  conforms: true
+  evidence: Protected endpoints use Authorization Bearer JWT (Privy ID token).
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: >-
+    Errors use HTTP status codes and an ad-hoc {error, kind} JSON body on
+    /token-info; application/problem+json is not used.
+- id: oauth2
+  conforms: false
+  evidence: No oauth2 security scheme is documented; auth is bearer JWT + issuer
+    API key.
+- id: erc-20
+  conforms: true
+  evidence: Token Tool deploys standard ERC-20 token contracts.
+- id: erc-1400
+  conforms: true
+  evidence: Token Tool deploys ERC-1400 security-token contracts.
+- id: erc-721
+  conforms: true
+  evidence: Token Tool deploys ERC-721 (NFT) contracts.
+- id: mica
+  conforms: partial
+  evidence: >-
+    Bitbond markets MiCA / eWpG regulatory alignment for issuance; this is a
+    business/regulatory posture, not an audited certification captured here.
+- id: certik-audit
+  conforms: true
+  evidence: Token Tool smart contracts are described as CertiK-audited.
+notes: >-
+  Derived posture only; no published SOC 2 / ISO 27001 / PCI compliance program
+  or trust center was found, so no `Compliance` pointer is emitted.

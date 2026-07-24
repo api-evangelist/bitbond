@@ -1,0 +1,33 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/bitbond/token-tool-mcp
+docs: https://docs.bitbond.com/asset-tokenization-suite/token-tool/tokentool-mcp
+cli:
+  name: token-tool-mcp
+  vendor: Bitbond GmbH
+  official: true
+  license: MIT
+  install:
+  - method: npx
+    command: npx -y token-tool-mcp
+  - method: npm-global
+    command: npm install -g token-tool-mcp
+  description: >-
+    The Token Tool MCP distribution doubles as a first-party CLI for token
+    deployment and management. As an MCP server it speaks stdio to an AI client;
+    installed globally it exposes the same token-lifecycle surface directly.
+  command_groups:
+  - group: deploy
+    commands: [deploy_token, estimate_cost, list_chains]
+  - group: token-lifecycle
+    commands: [mint_tokens, burn_tokens, transfer_tokens, pause_token, unpause_token]
+  - group: read
+    commands: [get_token_info, list_deployed_tokens, get_wallet_info]
+  - group: compliance
+    commands:
+    - add_to_whitelist
+    - remove_from_whitelist
+    - get_whitelist
+    - add_to_blacklist
+    - remove_from_blacklist
+    - get_compliance_status

@@ -1,0 +1,18 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.bitbond.com/asset-tokenization-suite
+versioning:
+  scheme: undocumented
+  notes: No public versioning or deprecation policy is documented for the
+    Offering Manager or Token Tool APIs.
+deprecation:
+  policy_url: null
+  sunset_header: false
+sla:
+  url: null
+  uptime_target: null
+status_page: https://status.bitbond.com
+changelog:
+  public: false
+  notes: No dated public changelog / release notes were found in the docs.
+deprecated_operations: []

@@ -1,0 +1,12 @@
+generated: '2026-07-18'
+method: generated
+source: mcp/bitbond-mcp.yml
+skills:
+- file: bitbond-deploy-token.md
+  name: Deploy and manage a compliant ERC-20 token with Bitbond Token Tool
+  api: mcp/bitbond-mcp.yml
+  operations: [list_chains, estimate_cost, deploy_token, get_token_info, mint_tokens, transfer_tokens, add_to_whitelist, get_compliance_status]
+notes: >-
+  Grounded in the real, published tool names of the official token-tool-mcp
+  server (no OpenAPI spec is publicly downloadable for the REST APIs, so skills
+  are grounded in the MCP tool surface rather than invented operationIds).

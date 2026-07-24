@@ -1,0 +1,30 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.bitbond.com/asset-tokenization-suite/offering-manager/settings-and-configuration
+spec_type: Webhooks
+service: Bitbond Offering Manager
+delivery:
+  style: outbound HTTP callbacks to issuer-configured endpoints
+  configuration: >-
+    Settings -> Webhooks & Event Subscriptions: issuers add webhook endpoint
+    URLs and subscribe to events.
+  signature:
+    method: signing secret supplied at configuration time to validate deliveries
+    header: undocumented
+    algorithm: undocumented
+  reliability:
+    monitoring: >-
+      A "Webhook Health Alert" surfaces failed deliveries with failure details
+      and timestamps for investigation and retry.
+    retry_policy: undocumented
+  payload_schema: undocumented
+events:
+- name: order.created
+  description: An investor order was created.
+- name: investor.kyc.completed
+  description: An investor completed KYC.
+notes: >-
+  The docs confirm webhooks exist and name two event types; they state the full
+  event catalog and payload schema are not published. No AsyncAPI document is
+  provided by the vendor, so this captures the webhook surface as a Webhooks
+  artifact (not a fabricated AsyncAPI spec).

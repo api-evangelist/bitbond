@@ -1,0 +1,29 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.bitbond.com/asset-tokenization-suite/token-tool/testnet-faucets
+sandbox:
+  offering_manager:
+    mode: Free plan sandbox
+    description: >-
+      The Offering Manager Free plan lets users explore all features in sandbox
+      mode; live offerings cannot be published until on a paid plan.
+    docs: https://docs.bitbond.com/asset-tokenization-suite/offering-manager/getting-started
+  token_tool:
+    description: >-
+      Token Tool supports deployment and testing on public testnets, with
+      Bitbond-hosted faucets for obtaining test funds.
+    testnets:
+    - name: Ethereum Sepolia
+      faucet: https://tokentool.bitbond.com/faucet/ethereum-sepolia
+      hosted_by: bitbond
+    - name: BNB Smart Chain (BSC) testnet
+      faucet: https://tokentool.bitbond.com/faucet/bsc-testnet
+      hosted_by: bitbond
+    - name: Base Sepolia
+      faucet: https://tokentool.bitbond.com/faucet/base-sepolia
+      hosted_by: bitbond
+    - name: Solana Devnet
+      faucet: https://faucet.solana.com
+      hosted_by: external
+notes: Test values (faucets, testnet names) captured verbatim from the docs; no
+  test values were invented.

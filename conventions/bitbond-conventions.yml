@@ -1,0 +1,54 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.bitbond.com/asset-tokenization-suite/offering-manager/intro-offering-manager
+scope: Bitbond Offering Manager API (https://om.bitbond.com/api/public)
+authentication:
+  style: Bearer token (Privy ID token / JWT) for protected endpoints; issuer API
+    key or session JWT for issuer-management endpoints; some public endpoints are
+    unauthenticated.
+  ref: authentication/bitbond-authentication.yml
+tenancy:
+  model: multi-tenant by subdomain
+  param: subdomain
+  notes: >-
+    Public reads scope to a tenant via a `subdomain=<tenant_subdomain>` query
+    parameter (e.g. GET /offerings/:slug?subdomain=..., orders portfolio, payments
+    checkout-config). Issuer scoping is by offeringId on export endpoints.
+pagination:
+  documented: false
+  notes: Pagination is not documented in the public API reference.
+versioning:
+  scheme: undocumented
+  notes: >-
+    No explicit API version is exposed in the path (base path is /api/public);
+    no versioning policy is published.
+error_envelope:
+  documented: partial
+  shape: >-
+    The GET /token-info endpoint returns a JSON body with `error` and `kind`
+    fields on failure. Other endpoints return conventional HTTP status codes
+    (400, 401, 403, 404, 429, 500); a uniform problem+json envelope is not
+    documented and RFC 9457 is not claimed.
+  ref: errors/bitbond-problem-types.yml
+rate_limiting:
+  documented: partial
+  signal: HTTP 429 Too Many Requests is returned by GET /token-info; no
+    rate-limit headers or quotas are published for other endpoints.
+idempotency:
+  documented: false
+  notes: >-
+    No idempotency-key header or mechanism is documented for the Offering
+    Manager API; on-chain Token Tool actions are naturally idempotent at the
+    transaction level via wallet nonces but this is not an API convention.
+webhooks:
+  supported: true
+  ref: asyncapi/bitbond-offering-manager-webhooks.yml
+  notes: >-
+    Issuers configure outbound webhook endpoints (Settings -> Webhooks & Event
+    Subscriptions) with a signing secret to validate deliveries.
+data_privacy:
+  gdpr_endpoints:
+  - GET /investor/gdpr/export
+  - POST /investor/gdpr/erase
+  notes: The API exposes explicit GDPR data-export and erasure endpoints for
+    investors.

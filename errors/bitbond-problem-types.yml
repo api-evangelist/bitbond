@@ -1,0 +1,39 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.bitbond.com/asset-tokenization-suite/offering-manager/intro-offering-manager
+format: http-status
+scope: Bitbond Offering Manager API
+envelope:
+  documented: partial
+  description: >-
+    HTTP status codes are the primary error signal. GET /token-info returns a
+    JSON body with `error` (message) and `kind` (category) fields. A uniform
+    application/problem+json (RFC 9457) envelope is not documented.
+problems:
+- status: 400
+  title: Bad Request
+  remediation: Invalid parameters (e.g. malformed slug, chain, or address).
+  seen_on: [GET /offerings/:slug, GET /token-info, PATCH /investor/profile]
+- status: 401
+  title: Unauthorized
+  remediation: Missing or invalid Privy bearer token / issuer credential.
+  seen_on: [POST /checkout-intent, protected /orders and /payments endpoints]
+- status: 403
+  title: Forbidden
+  remediation: Authenticated but not permitted for the requested tenant/resource.
+  seen_on: [GET /offerings/:slug]
+- status: 404
+  title: Not Found
+  remediation: Offering, document, token, or investor profile does not exist.
+  seen_on: [GET /offerings/:slug, GET /token-info, POST /checkout-intent, PATCH /investor/profile]
+- status: 429
+  title: Too Many Requests
+  remediation: Rate limit exceeded; retry after backoff.
+  seen_on: [GET /token-info]
+- status: 500
+  title: Internal Server Error
+  remediation: Server-side failure; retry or contact support.
+  seen_on: [POST /checkout-intent]
+notes: >-
+  Derived from the status codes enumerated in the published API reference; not
+  from an OpenAPI spec (none is publicly downloadable).

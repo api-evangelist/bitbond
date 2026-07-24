@@ -1,0 +1,36 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/bitbond
+packages:
+- language: javascript
+  registry: npm
+  name: token-tool-mcp
+  url: https://www.npmjs.com/package/token-tool-mcp
+  install: npx -y token-tool-mcp
+  version: 1.1.1
+  license: MIT
+  official: true
+  kind: mcp-server-cli
+  description: >-
+    Bitbond Token Tool MCP server / CLI (Bitbond GmbH). Deploy and manage ERC-20
+    tokens via AI agents; also usable as a global CLI (npm install -g
+    token-tool-mcp).
+related_source:
+- language: typescript
+  name: token-tool-api-examples
+  url: https://github.com/bitbond/token-tool-api-examples
+  official: true
+  kind: examples
+  description: >-
+    Collection of TypeScript scripts illustrating programmatic interaction with
+    Token Tool contracts on EVM chains. Example code, not a published package.
+- language: solidity
+  name: smart-contracts-public
+  url: https://github.com/bitbond/smart-contracts-public
+  official: true
+  kind: source
+  description: Public Bitbond smart-contract implementations.
+notes: >-
+  No traditional first-party client SDK is published to a package registry;
+  Token Tool integration is contract/MCP-level. The only official published
+  package is the token-tool-mcp npm distribution.

@@ -1,0 +1,64 @@
+# Bitbond Documentation
+
+## Bitbond Token Tool Documentation
+
+- [Overview](https://docs.bitbond.com/asset-tokenization-suite/overview.md)
+- [Intro Token Tool](https://docs.bitbond.com/asset-tokenization-suite/token-tool/intro-token-tool.md)
+- [Protocols and blockchains](https://docs.bitbond.com/asset-tokenization-suite/token-tool/intro-token-tool/protocols-and-blockchains.md)
+- [Token custody](https://docs.bitbond.com/asset-tokenization-suite/token-tool/intro-token-tool/token-custody.md)
+- [Paying Fees on Token Tool](https://docs.bitbond.com/asset-tokenization-suite/token-tool/intro-token-tool/paying-fees-on-token-tool.md)
+- [Discount Codes](https://docs.bitbond.com/asset-tokenization-suite/token-tool/intro-token-tool/discount-codes.md)
+- [Create Token](https://docs.bitbond.com/asset-tokenization-suite/token-tool/create-token.md)
+- [Manage Token](https://docs.bitbond.com/asset-tokenization-suite/token-tool/create-token/manage-token.md)
+- [Create Token Sale](https://docs.bitbond.com/asset-tokenization-suite/token-tool/create-token-sale.md)
+- [Manage Token Sale](https://docs.bitbond.com/asset-tokenization-suite/token-tool/create-token-sale/manage-token-sale.md)
+- [Promote Your Token](https://docs.bitbond.com/asset-tokenization-suite/token-tool/promote-your-token.md)
+- [Airdrop Tokens](https://docs.bitbond.com/asset-tokenization-suite/token-tool/airdrop-tokens.md)
+- [Custom recipients](https://docs.bitbond.com/asset-tokenization-suite/token-tool/airdrop-tokens/custom-recipients.md)
+- [Autofill recipients](https://docs.bitbond.com/asset-tokenization-suite/token-tool/airdrop-tokens/autofill-recipients.md)
+- [Airdrop NFTs](https://docs.bitbond.com/asset-tokenization-suite/token-tool/airdrop-tokens/airdrop-nfts.md)
+- [Create Token Locker](https://docs.bitbond.com/asset-tokenization-suite/token-tool/create-token-locker.md)
+- [Automate Payments](https://docs.bitbond.com/asset-tokenization-suite/token-tool/automate-payments.md)
+- [Payment stream](https://docs.bitbond.com/asset-tokenization-suite/token-tool/automate-payments/payment-stream.md)
+- [Token vesting](https://docs.bitbond.com/asset-tokenization-suite/token-tool/automate-payments/token-vesting.md)
+- [Delivery vs. Payment (DvP)](https://docs.bitbond.com/asset-tokenization-suite/token-tool/automate-payments/delivery-vs.-payment-dvp.md)
+- [Create NFT](https://docs.bitbond.com/asset-tokenization-suite/token-tool/create-nft.md)
+- [Manage NFT](https://docs.bitbond.com/asset-tokenization-suite/token-tool/create-nft/manage-nft.md)
+- [Track Token Portfolio](https://docs.bitbond.com/asset-tokenization-suite/token-tool/track-token-portfolio.md)
+- [Create Chain Record](https://docs.bitbond.com/asset-tokenization-suite/token-tool/create-chain-record.md)
+- [Testnet Faucets](https://docs.bitbond.com/asset-tokenization-suite/token-tool/testnet-faucets.md)
+- [Token Tool API](https://docs.bitbond.com/asset-tokenization-suite/token-tool/token-tool-api.md)
+- [TokenTool MCP](https://docs.bitbond.com/asset-tokenization-suite/token-tool/tokentool-mcp.md): MCP Integration (Model Context Protocol)
+- [Intro TokenGems](https://docs.bitbond.com/asset-tokenization-suite/tokengems/intro-tokengems.md)
+- [Intro Offering Manager](https://docs.bitbond.com/asset-tokenization-suite/offering-manager/intro-offering-manager.md)
+- [Getting Started](https://docs.bitbond.com/asset-tokenization-suite/offering-manager/getting-started.md)
+- [Dashboard](https://docs.bitbond.com/asset-tokenization-suite/offering-manager/dashboard.md)
+- [Managing Offerings](https://docs.bitbond.com/asset-tokenization-suite/offering-manager/managing-offerings.md)
+- [Invest Page Builder](https://docs.bitbond.com/asset-tokenization-suite/offering-manager/invest-page-builder.md)
+- [Investor & Order Management](https://docs.bitbond.com/asset-tokenization-suite/offering-manager/investor-and-order-management.md)
+- [Investor Custody](https://docs.bitbond.com/asset-tokenization-suite/offering-manager/investor-custody.md)
+- [Settings & Configuration](https://docs.bitbond.com/asset-tokenization-suite/offering-manager/settings-and-configuration.md)
+- [Team Management](https://docs.bitbond.com/asset-tokenization-suite/offering-manager/team-management.md)
+- [My Account](https://docs.bitbond.com/asset-tokenization-suite/offering-manager/my-account.md)
+- [Billing & Subscription](https://docs.bitbond.com/asset-tokenization-suite/offering-manager/billing-and-subscription.md)
+- [Audit Trail](https://docs.bitbond.com/asset-tokenization-suite/offering-manager/audit-trail.md)
+- [Partners Directory](https://docs.bitbond.com/asset-tokenization-suite/offering-manager/partners-directory.md)
+- [Investor Experience](https://docs.bitbond.com/asset-tokenization-suite/offering-manager/investor-experience.md)
+- [FAQ & Troubleshooting](https://docs.bitbond.com/asset-tokenization-suite/offering-manager/faq-and-troubleshooting.md)
+- [Offering Manager API](https://docs.bitbond.com/asset-tokenization-suite/offering-manager/offering-manager-api.md)
+
+
+---
+
+# Agent Instructions
+This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
+
+## Querying This Documentation
+If you need additional information, you can query the documentation dynamically by asking a question.
+Perform an HTTP GET request on a page URL with the `ask` query parameter:
+```
+GET https://docs.bitbond.com/asset-tokenization-suite/overview.md?ask=<question>
+```
+The question should be specific, self-contained, and written in natural language.
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.

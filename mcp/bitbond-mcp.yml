@@ -1,0 +1,55 @@
+generated: '2026-07-18'
+method: searched
+status: published
+source: https://github.com/bitbond/token-tool-mcp
+docs: https://docs.bitbond.com/asset-tokenization-suite/token-tool/tokentool-mcp
+server:
+  name: token-tool-mcp
+  vendor: Bitbond GmbH
+  transport: stdio
+  official: true
+  install: npx -y token-tool-mcp
+  registry: npm
+  package: token-tool-mcp
+  version: 1.1.1
+  license: MIT
+  notes: >-
+    Local stdio MCP server (no network listener / open ports). Wraps the Bitbond
+    Token Tool smart-contract factory to deploy and manage CertiK-audited ERC-20
+    tokens and compliance controls from any MCP-capable AI agent, across EVM and
+    non-EVM chains.
+tools:
+- name: deploy_token
+  description: Deploy a new ERC-20 token contract via the Token Tool factory.
+- name: estimate_cost
+  description: Estimate the deployment/transaction cost on a target chain.
+- name: list_chains
+  description: List supported blockchains (mainnets and testnets).
+- name: get_token_info
+  description: Read on-chain metadata and state for a deployed token.
+- name: list_deployed_tokens
+  description: List tokens deployed by the connected wallet.
+- name: mint_tokens
+  description: Mint new units of a token.
+- name: burn_tokens
+  description: Burn units of a token.
+- name: pause_token
+  description: Pause transfers on a pausable token.
+- name: unpause_token
+  description: Resume transfers on a paused token.
+- name: transfer_tokens
+  description: Transfer token units to a recipient.
+- name: get_wallet_info
+  description: Read wallet address and balances.
+- name: add_to_whitelist
+  description: Add an address to a token's transfer whitelist.
+- name: remove_from_whitelist
+  description: Remove an address from a token's transfer whitelist.
+- name: get_whitelist
+  description: Read the current whitelist for a token.
+- name: add_to_blacklist
+  description: Add an address to a token's blacklist.
+- name: remove_from_blacklist
+  description: Remove an address from a token's blacklist.
+- name: get_compliance_status
+  description: Read compliance / transfer-restriction status for a token.
