@@ -13,11 +13,9 @@ server:
   package: token-tool-mcp
   version: 1.1.1
   license: MIT
-  notes: >-
-    Local stdio MCP server (no network listener / open ports). Wraps the Bitbond
-    Token Tool smart-contract factory to deploy and manage CertiK-audited ERC-20
-    tokens and compliance controls from any MCP-capable AI agent, across EVM and
-    non-EVM chains.
+  notes: Local stdio MCP server (no network listener / open ports). Wraps the Bitbond Token Tool smart-contract
+    factory to deploy and manage CertiK-audited ERC-20 tokens and compliance controls from any MCP-capable
+    AI agent, across EVM and non-EVM chains.
 tools:
 - name: deploy_token
   description: Deploy a new ERC-20 token contract via the Token Tool factory.
@@ -53,3 +51,9 @@ tools:
   description: Remove an address from a token's blacklist.
 - name: get_compliance_status
   description: Read compliance / transfer-restriction status for a token.
+deployment:
+  mode: local-stdio
+  verified: searched
+  tools: 17
+  checked: '2026-08-12'
+  source: catalog MCP census
