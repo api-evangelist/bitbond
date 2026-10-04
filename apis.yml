@@ -21,14 +21,18 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 deliveryModel:
   model: saas
-  open_source: false
+  license_evidence:
+    not_product:
+    - bitbond/token-tool-api-examples
+  open_source: unknown
   commercial: true
   callable_host: false
   label: Hosted service · you call their endpoint
-  confidence: medium
+  confidence: low
   source:
   - pricing
-  generated: '2026-08-28'
+  - repository-not-product
+  generated: '2026-09-25'
   method: derived
 accessModel:
   pricing: unknown
