@@ -64,6 +64,109 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Bitbond is a company surfaced as a portfolio company of point-nine and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Bitbond is a Berlin-based tokenization technology company (Bitbond GmbH) that provides an Asset Tokenization Suite for issuing, managing, and distributing digital assets on public blockchains. Its two developer-facing products are Token Tool, a self-serve platform and API for deploying and managing compliant ERC-20, ERC-1400, and ERC-721 smart contracts (minting, burning, transfers, vesting, token sales, airdrops, and payment automation) across 11+ EVM and non-EVM chains; and Offering Manager, an end-to-end securities-issuance platform with a public investor REST API covering offerings, orders, payments, KYC/AML, and investor profiles. Bitbond also ships an official Token Tool MCP server so AI agents can deploy and manage tokens, plus documented webhooks, testnet faucets, and a status page.
 
-Backed by: point-nine — https://www.bitbond.com
+**Areas:** Company · Tokenization · Blockchain · Digital Assets · Smart Contracts · Web3 · Securities · Payments · MCP
+
+## Bitbond on APIs.io
+
+Everything profiled for Bitbond is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/bitbond/](https://apis.io/providers/bitbond/)** — or go straight to one of the APIs or properties below.
+
+### APIs (2)
+
+- [Bitbond Offering Manager API](https://apis.io/apis/bitbond/bitbond-offering-manager-api/) — Public investor REST API for the Bitbond Offering Manager securities-issuance platform. Covers offerings lookup, orders, checkout/payments, KYC, investor…
+- [Bitbond Token Tool API](https://apis.io/apis/bitbond/bitbond-token-tool-api/) — Programmatic token and smart-contract deployment API for Token Tool. Enables minting, burning, transferring, pausing, and metadata updates on CertiK-audited…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Bitbond Offering Manager Webhooks](https://apis.io/asyncapis/bitbond/bitbond-offering-manager-webhooks/)
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [token-tool-mcp](https://apis.io/servers/bitbond/token-tool-mcp/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Bitbond Authentication](https://apis.io/security/bitbond/bitbond-authentication/)
+- [Bitbond Domain Security](https://apis.io/security/bitbond/bitbond-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.bitbond.com)
+- [Documentation](https://docs.bitbond.com/asset-tokenization-suite)
+- [Getting started](https://docs.bitbond.com/asset-tokenization-suite/offering-manager/getting-started)
+- [API reference](https://om.bitbond.com/api/docs)
+- [Pricing](https://tokentool.bitbond.com/pricing)
+- [Sign up](https://tokentool.bitbond.com)
+- [Blog](https://www.bitbond.com/resources)
+- [Terms of service](https://tokentool.bitbond.com/terms)
+- [Privacy policy](https://www.bitbond.com/legal)
+- [GitHub](https://github.com/bitbond)
+- [Status](https://status.bitbond.com)
+
+## API Evangelist rating
+
+**Kin Score 43.9** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 71.7 |
+| Contract quality | 39.0 |
+| Contract governance | 4.5 |
+| Operational transparency | 18.4 |
+| Developer ergonomics | 73.2 |
+| Access clarity | 44.7 |
+
+**Agent readiness 27.0** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | documented (partial credit) |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | yes |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 22.3** — Payments
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/bitbond/](https://apis.io/providers/bitbond/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Bitbond: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/bitbond/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
